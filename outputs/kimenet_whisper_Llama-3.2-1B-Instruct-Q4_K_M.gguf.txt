@@ -1,0 +1,13 @@
+**Gépi tanulás és algoritmusok**
+
+A gépi tanulás egy olyan technológia, amely segít a gépi rendszerekben tanuló algoritmusokat fejleszteni. Ezek a gépi rendszerek képesek a működésük során gyűjtött tapasztalatok segítségével javítani a saját hatékonyságukon.
+
+**Kapcsolódó fogalmak**
+
+*   Algoritmusok: A gépi rendszerekben használt számítógépes eszközök, amelyek képesek a működésük során gyűjtött tapasztalatok segítségével javítani a saját hatékonyságukon.
+*   Tanulás: A gépi rendszerekben használt technológiák, amelyek segítik a gépi rendszerekben tanuló algoritmusokat fejleszteni.
+*   Induktív tanulás: A gépi rendszerekben használt technológiák, amelyek segítik a gépi rendszerekben tanuló algoritmusokat fejleszteni.
+
+**Összefoglalás**
+
+A gépi tanulás egy olyan technológia, amely segít a gépi rendszerekben tanuló algoritmusokat fejleszteni. Ezek a gépi rendszerek képesek a működésük során gyűjtött tapasztalatok segítségével javítani a saját hatékonyságukon. A gépi tanulás egy olyan technológia, amely segít a gépi rendszerekben tanuló algoritmusokat fejleszteni, és a gépi rendszerekben használt technológiák, amelyek segítik a gépi rendszerekben tanuló algoritmusokat fejleszteni.

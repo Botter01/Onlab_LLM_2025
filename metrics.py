@@ -26,7 +26,7 @@ def save_metrics_to_file(reference_path, hypothesis_path, output_file_path, mode
         # Eredmények összeállítása
         results = {
             'Model': model_name,
-            'Subject': reference_path.split('_')[1].split('.')[0] ,
+            'Subject': reference_path.split('_')[4].split('.')[0] ,
             'BLEU': bleu_score,
             'METEOR': meteor,
             'ROUGE-1 Precision': rouge_scores['rouge-1']['p'],
@@ -68,9 +68,9 @@ if __name__ == "__main__":
     # nltk.download('wordnet')
     
     # Útvonalak beállítása
-    reference_path = "./references/referencia_hangfajl_rendes_leirat.txt"
-    hypothesis_path = "./outputs/kimenet_hangfajl_rendes_leirat_SummLlama3.2-3B-Q4_K_M.gguf.txt"
-    output_file_path = "./results/SummLlama3.2-3B-Q4_K_M.gguf_metrics.csv"
+    reference_path = "./Onlab_LLM_2025/references/referencia_hangfajl_whisper_leirat.txt"
+    hypothesis_path = "./Onlab_LLM_2025/outputs/kimenet_whisper_Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf.txt"
+    output_file_path = "./Onlab_LLM_2025/results/Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf_metrics.csv"
     
     # Eredmények mentése
-    save_metrics_to_file(reference_path, hypothesis_path, output_file_path, "SummLlama3.2-3B-Q4_K_M.gguf")
+    save_metrics_to_file(reference_path, hypothesis_path, output_file_path, "Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M")

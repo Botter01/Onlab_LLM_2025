@@ -3,10 +3,10 @@ import pandas as pd
 import re, os
 
 # Tesztanyagok beolvasása
-with open("./hangfajl_leirat.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/beast_2_leirat.txt", "r", encoding="utf-8") as f:
     reference_text = f.read()
 
-with open("./outputs/kimenet_hangfajl_SummLlama3.2-3B-Q4_K_M.gguf.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/outputs/kimenet_beast_Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf.txt", "r", encoding="utf-8") as f:
     hypothesis_text = f.read()
 
 # Llama 3 modell betöltése a helyes útvonallal
@@ -42,7 +42,7 @@ Végül számold ki az átlagpontszámot is ilyen formában: (1.0-10.0). De ne a
 
 # Értékelés futtatása
 criteria = "pontosság, koherencia, tömörség"
-output_file_path = "./results/SummLlama3.2-3B-Q4_K_M.gguf_g_eval_metrics.csv"
+output_file_path = "./Onlab_LLM_2025/results/Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf_g_eval_metrics.csv"
 prompt = create_geval_prompt(reference_text, hypothesis_text, criteria)
 
 # Generálás
@@ -55,17 +55,10 @@ output = llm(
 text = output["choices"][0]["text"]
 print(text)
 
-def extract_g_eval_scores(text: str):
-    matches = re.findall(r"\*\*(.*?) ?\(?(\d+(?:\.\d+)?)/(\d+(?:\.\d+)?)\)?\*\*", text)
-    return {metric: float(score) for metric, score in matches}
-
-g_eval_scores = extract_g_eval_scores(text)
-#print(g_eval_scores)
 
 results = {
-        "Model": "SummLlama3.2-3B-Q4_K_M",
-        "Subject": "hangfajl",
-        **g_eval_scores
+        "Model": "Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M",
+        "Subject": "hangfajl_beast_leirat",
     }
 df_results = pd.DataFrame([results])
         

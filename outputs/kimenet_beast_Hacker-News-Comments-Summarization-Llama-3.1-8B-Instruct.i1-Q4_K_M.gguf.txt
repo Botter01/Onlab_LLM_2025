@@ -1,0 +1,7 @@
+A gépi tanulás alapjait foglalja össze az előadás, amely a tanuló algoritmusok létrehozásának általános megfogalmazását kívánja megfogalmazni. A főpontok a tanulás definíciójának meghatározása, a tanuló példák általánosításának fontossága és a tanulás eredményeként kapott hipotézis jelentőségére vonatkoznak.
+
+A tanulás definíciójának meghatározása a főpont, amely a tanuló algoritmusok létrehozásának általános megfogalmazását kívánja megfogalmazni. A tanulás során gyűjtött tapasztalatok segítségével képesek javítani a saját hatékonyságukon. A tanulás során gyűjtött tapasztalatok segítségével képesek javítani a saját hatékonyságukon.
+
+A tanuló példák általánosításának fontossága kiemelendő, mivel a tanulás során nem látott példákra is szeretnénk ha jól le remélhetőleg jól működne a rendszer. A tanulás során nem látott példákra is szeretnénk ha jól le remélhetőleg jól működne a rendszer.
+
+A tanulás eredményeként kapott hipotézis jelentőségére vonatkozik, amely a rendszer az eredménye ez mindig egy hipotézis lesz tehát a rendszer az.

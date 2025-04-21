@@ -1,0 +1,3 @@
+A gépi tanulás alapjait foglalja össze az előadás, amely a tanuló algoritmusok létrehozásának általános megfogalmazását környékezi. A fő hangsúly azon van, hogy a tanuló algoritmusok képesek legyenek gyűjteni tapasztalatokat és javítani a saját hatékonyságukon, valamint hogy ezek a tapasztalatok milyen formában gyűjthetők és milyen mértékben javítható a hatékonyság.
+
+A tanulás általánosítására és a nem látott példákra történő alkalmazhatóságra is hangsúlyt fektetnek, valamint a tanuló példák reprezentáló képességére és a félrevezetés elkerülésére. Az előadás azt is megemlíti, hogy a tanulás eredménye mindig egy hipotézis lesz.

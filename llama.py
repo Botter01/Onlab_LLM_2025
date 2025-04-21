@@ -22,11 +22,11 @@ llm = Llama(
 # Előző memória használat
 initial_memory = process.memory_info().rss / (1024 * 1024)  # MB
 
-with open("./prompts/system_prompt_hun.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/prompts/system_prompt_hun.txt", "r", encoding="utf-8") as f:
     system_prompt = f.read().strip()
 
 print(system_prompt)
-with open("./prompts/user_prompt_hangfajl_hun.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/prompts/user_prompt_whisper_hun.txt", "r", encoding="utf-8") as f:
     user_prompt = f.read().strip()
 messages = [
     {"role": "system", "content": system_prompt},
@@ -48,11 +48,11 @@ final_memory = process.memory_info().rss / (1024 * 1024)  # MB
 tokens = nltk.word_tokenize(response_text)
 token_count = len(tokens)
 
-output_dir = "outputs"
+output_dir = "Onlab_LLM_2025/outputs"
 os.makedirs(output_dir, exist_ok=True)
 
 # Kimenet fájlba írása
-output_file_path = os.path.join(output_dir, f"kimenet_hangfajl_{hackerllama_3_1_8B}.txt")
+output_file_path = os.path.join(output_dir, f"kimenet_whisper_{hackerllama_3_1_8B}.txt")
 with open(output_file_path, "w", encoding="utf-8") as f:
     f.write(response_text)
 
@@ -69,7 +69,7 @@ performance_csv_path = os.path.join(output_dir, f"{hackerllama_3_1_8B}_performan
 # Az adatokat DataFrame-be gyűjtjük
 data = {
     'Model': [hackerllama_3_1_8B],
-    'Subject': ["hangfajl"],
+    'Subject': ["whisper"],
     'Generation Time (seconds)': [f"{elapsed_time:.2f}"],
     'CPU Usage (%)': [f"{cpu_usage}"],
     'Memory Usage (MB)': [f"{final_memory - initial_memory:.2f}"],

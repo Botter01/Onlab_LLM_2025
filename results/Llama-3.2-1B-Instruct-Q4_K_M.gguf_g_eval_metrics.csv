@@ -1,0 +1,7 @@
+Model,Subject,Accuracy,Coherence,Concision,Overall average score
+Llama-3.2-1B-Instruct-Q4_K_M,hangfajl_whisper_leirat,7.5,8.5,8.0,8.0
+Llama-3.2-1B-Instruct-Q4_K_M,hangfajl_beast_leirat,6.0,7.0,8.0,7.3
+Llama-3.2-1B-Instruct-Q4_K_M,hangfajl_rendes_leirat,8.0,9.0,7.0,8.0
+Llama-3.2-1B-Instruct-Q4_K_M,AI,8.5,9.0,7.5,8.2
+Llama-3.2-1B-Instruct-Q4_K_M,IT,6.0,7.0,8.0,7.0
+Llama-3.2-1B-Instruct-Q4_K_M,football,8.5,9.0,7.5,8.3
