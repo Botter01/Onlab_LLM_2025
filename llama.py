@@ -14,9 +14,9 @@ process = psutil.Process(os.getpid())
 start_time = time.time()
 
 llm = Llama(
-      model_path=f"./llm_models/{hackerllama_3_1_8B}",
+      model_path=f"./llm_models/{llama_3_2_1B}",
       n_gpu_layers=-1, 
-      n_ctx=4096
+      n_ctx=8000
 )
 
 # Előző memória használat
@@ -26,7 +26,7 @@ with open("./Onlab_LLM_2025/prompts/system_prompt_hun.txt", "r", encoding="utf-8
     system_prompt = f.read().strip()
 
 print(system_prompt)
-with open("./Onlab_LLM_2025/prompts/user_prompt_whisper_hun.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/prompts/user_prompt_whisper_2_hun.txt", "r", encoding="utf-8") as f:
     user_prompt = f.read().strip()
 messages = [
     {"role": "system", "content": system_prompt},
@@ -36,7 +36,7 @@ messages = [
 # Modell futtatása
 output = llm.create_chat_completion(
     messages=messages,
-    max_tokens=2000
+    max_tokens=10000
 )
 
 response_text = output["choices"][0]["message"]["content"].strip()
@@ -52,7 +52,7 @@ output_dir = "Onlab_LLM_2025/outputs"
 os.makedirs(output_dir, exist_ok=True)
 
 # Kimenet fájlba írása
-output_file_path = os.path.join(output_dir, f"kimenet_whisper_{hackerllama_3_1_8B}.txt")
+output_file_path = os.path.join(output_dir, f"kimenet_whisper_2_{llama_3_2_1B}.txt")
 with open(output_file_path, "w", encoding="utf-8") as f:
     f.write(response_text)
 
@@ -64,12 +64,12 @@ elapsed_time = end_time - start_time  # Másodpercekben
 cpu_usage = psutil.cpu_percent(interval=1)  # CPU használat (1 másodpercet várunk)
 
 # CSV fájl elérési útja
-performance_csv_path = os.path.join(output_dir, f"{hackerllama_3_1_8B}_performance_metrics.csv")
+performance_csv_path = os.path.join(output_dir, f"{llama_3_2_1B}_performance_metrics.csv")
 
 # Az adatokat DataFrame-be gyűjtjük
 data = {
-    'Model': [hackerllama_3_1_8B],
-    'Subject': ["whisper"],
+    'Model': [llama_3_2_1B],
+    'Subject': ["whisper_2"],
     'Generation Time (seconds)': [f"{elapsed_time:.2f}"],
     'CPU Usage (%)': [f"{cpu_usage}"],
     'Memory Usage (MB)': [f"{final_memory - initial_memory:.2f}"],

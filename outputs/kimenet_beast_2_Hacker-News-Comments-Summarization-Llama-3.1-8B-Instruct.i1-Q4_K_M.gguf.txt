@@ -1,0 +1,12 @@
+Az összefoglalás:
+A gépi tanulás általános megfogalmazásáról beszélünk, amely olyan programok létrehozására irányul, amelyek a működésük során gyűjtött tapasztalatok segítségével képesek javítani a saját hatékonyságukon. A tanulás során a rendszer egy hipotézist állít föl, amelyet további példák alapján finomítunk és javítunk. A feladatokat felügyelt és felügyelet nélküli tanulásra osztjuk, ahol a felügyelt tanulásban a tanító példáknak helyes válaszuk van.
+
+Kulcsfontosságú fogalmak:
+- **Gépi tanulás**: Olyan programok létrehozása, amelyek a működésük során gyűjtött tapasztalatok segítségével képesek javítani a saját hatékonyságukon.
+- **Hipotézis**: A tanulás során a rendszer által állított elmélet, amelyet további példák alapján finomítunk és javítunk.
+- **Felügyelt tanulás**: A tanító példáknak helyes válaszuk van.
+- **Felügyelet nélküli tanulás**: Nincsen külső támogatás, nincsenek osztálycímkék, csak adatpontok.
+
+Lényegi információk:
+- A tanulás során a rendszer egy hipotézist állít föl, amelyet további példák alapján finomítunk és javítunk.
+- A feladatokat felügyelt és felügyelet nélküli tanulásra osztjuk, ahol a felügyelt tanulásban a tanító példáknak helyes válaszuk van.

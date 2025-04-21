@@ -5,3 +5,5 @@ SummLlama3.2-3B-Q4_K_M.gguf,football,21.9,7.4,1980.33,161
 SummLlama3.2-3B-Q4_K_M.gguf,hangfajl_rendes_leirat,46.46,7.7,2042.15,93
 SummLlama3.2-3B-Q4_K_M.gguf,hangfajl_beast_leirat,62.72,4.3,2057.52,134
 SummLlama3.2-3B-Q4_K_M.gguf,hangfajl_whisper_leirat,48.89,6.3,2057.48,138
+SummLlama3.2-3B-Q4_K_M.gguf,beast_2,300.42,8.0,2351.6,497
+SummLlama3.2-3B-Q4_K_M.gguf,whisper_2,335.42,9.0,2351.82,659
