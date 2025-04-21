@@ -1,0 +1,11 @@
+Az első előadás általános áttekintést nyújt a gépi tanulás módszereiről, olyan alapelveket ismertetve, amelyek minden tanuló algoritmusra érvényesek. A konkrét algoritmusok későbbi órák témái lesznek.
+
+A gépi tanulás célja, hogy olyan programokat hozzunk létre, amelyek a működésük során szerzett tapasztalatok alapján képesek javítani saját hatékonyságukat. Ez egy szándékosan általános megfogalmazás, amely a tanulás lényegét hangsúlyozza: a működés közbeni tapasztalatszerzés és fejlődés képességét.
+
+Ahhoz, hogy ezt pontosabban értsük, definiálnunk kell, mit jelent a tapasztalat, hogyan mérjük a hatékonyságot, és hogyan történik a javulás. Ezek konkretizálásával a tárgyalt témák köre fokozatosan szűkül majd.
+
+A cél olyan algoritmusok fejlesztése, amelyek képesek a tanítópéldákból szabályszerűségeket és összefüggéseket kinyerni. Fontos, hogy ne csak a tanult példákra legyenek képesek jól reagálni, hanem új, korábban nem látott esetekre is – ezt nevezzük induktív tanulásnak, vagyis általánosítható tudásnak.
+
+Feltételezzük, hogy a tanítópéldák megbízhatóak és jól reprezentálják a tanulandó mintázatokat. Enélkül ezek a módszerek nem lennének alkalmazhatók.
+
+Végül, a tanulási folyamat eredménye mindig egy hipotézis lesz: a rendszer egy olyan feladatmegoldási modellt alkot, amely az adott probléma megoldására szolgál.

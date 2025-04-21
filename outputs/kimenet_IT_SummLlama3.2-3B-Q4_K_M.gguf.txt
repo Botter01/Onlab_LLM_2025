@@ -1,0 +1,7 @@
+The process of learning malware behaviors is known as malware analysis, which requires techniques such as static analysis, dynamic analysis, symbolic execution, and concolic execution to analyze malware in a complete, reliable, and scalable way. 
+
+Static analysis involves examining code without executing it, but its limitations include inconsistent results with actual malware behaviors and the ability of malware authors to evade it through code obfuscation and packing. Dynamic analysis monitors malware execution to identify malicious behaviors, which can bypass code obfuscation techniques and defeat anti-analysis mechanisms, providing a more precise assessment of program behaviors. 
+
+Malware authors often use anti-analysis mechanisms to resist analysis, making the challenge of malware analysis to detect and bypass these mechanisms. Static analysis, dynamic analysis, symbolic execution, and concolic execution are employed to support the software development cycle, but often need to be customized or extended for malware analysis due to the complexity and volume of malware. 
+
+Fuzzing is a method for discovering vulnerabilities and triggering malware behaviors by feeding randomized inputs to programs, but it has limitations due to code-coverage issues. Concolic execution formulates constraints to find complex inputs, but is expensive and slow. Hybrid fuzzing combines the approaches of fuzzing and concolic execution to explore the

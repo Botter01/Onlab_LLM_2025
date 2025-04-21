@@ -1,0 +1,9 @@
+Malware analysis involves studying malware behaviors to detect and mitigate threats. Given the growing volume and complexity of malware, rapid, reliable, and scalable analysis is necessary. Techniques like static analysis, dynamic analysis, symbolic execution, and concolic execution are employed, often needing customization due to malware's anti-analysis mechanisms.
+
+Static Analysis examines code (source, intermediate, or binary) without executing it. While it provides broad insights, it has limitations such as inconsistency with actual runtime behaviors and vulnerability to obfuscation or packing techniques used by malware to evade detection.
+
+Dynamic Analysis observes malware execution to identify malicious behaviors. It can bypass static analysis evasion techniques by analyzing unpacked code at runtime. It offers precise behavior identification but is limited by the input cases used and may miss behaviors not triggered during testing. Key considerations include which behaviors to identify, what system features to collect, and how to isolate malware effects from benign system components.
+
+Fuzzing involves feeding random inputs to software to find vulnerabilities. It can trigger malware behaviors but is limited by code-coverage issues. A hybrid approach, combining fuzzing with concolic execution, can enhance coverage but at the cost of increased complexity and slower performance.
+
+Symbolic Execution analyzes programs by treating variables as symbols to explore all possible paths. Unlike fuzzing, which tests specific inputs, symbolic execution explores multiple branches at once, allowing it to uncover previously unexecuted code sections and behaviors.

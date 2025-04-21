@@ -1,0 +1,14 @@
+Gépi tanulásos előadásról
+
+A gépi tanulás módszerei kapcsolódnak a működés során gyűjtött tapasztalatok segítségével. A célunk lényege, hogy olyan algoritmusokat készítsünk, amelyek működésük során tapasztalatokat gyűjtnek, és ezzel javítjuk saját hatékonyságukat.
+
+A gépi tanulás általános megfogalmazásában a cél az, hogy minél inkább mindent lefedjünk. A lényeg az, hogy olyan algoritmusokat szeretnénk készítenünk, amelyek működésük során tapasztalatokat gyűjtnek, és ezzel javítjuk saját hatékonyságukat.
+
+A gépi tanulás módszerei konkretizálásának célja az, hogy minél általánosabbak legyenek a dolgok. Fokozatosan szűkítjük le és konkretizáljuk a dolgokat, ezzel az ára, hogy egyre szűkülni fog a lefedett témák köre.
+
+A gépi tanulásban fontos megjegyzések:
+
+- Nem csak a konkrét tanuló példákat kell megtanulnunk, hanem azokra is jól működjön a rendszer.
+- Általánosítani tudunk, és a tanulás során nem látott példákra is szeretnénk, ha jól működne a rendszer.
+
+A gépi tanulás módszerei mindig hipotézis lesznek, amely az adott feladat megoldására vonatkozik.

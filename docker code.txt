@@ -1,0 +1,11 @@
+docker run --rm -it --gpus all -v "E:/Önlab/llm_models:/llm_models" ghcr.io/ggerganov/llama.cpp:full-cuda --run -m /llm_models/Llama-3.2-1B-Instruct-Q4_K_M.gguf -p "Hello, how are you?"
+
+docker run --rm -it --gpus all -v "E:/Önlab/llm_models:/llm_models" ghcr.io/ggerganov/llama.cpp:full-cuda --run -m /llm_models/Llama-3.2-1B-Instruct-Q4_K_M.gguf -p "Summarize the following text:\nA digitális technológia fejlődése alapvetően megváltoztatta a mindennapi életünket. Az internet elterjedése, a mobiltelefonok és az okos eszközök gyors fejlődése lehetővé tette, hogy bárhonnan és bármikor kommunikáljunk, dolgozzunk, tanuljunk. Ugyanakkor a digitális világ új kihívásokat is hozott, például a személyes adatok védelmét, a kibertámadásokat és a digitális szakadékot. Mindezek mellett a mesterséges intelligencia gyors fejlődése új lehetőségeket kínál az egészségügyben, az oktatásban és az iparban, de ez új etikai kérdéseket is felvet."
+
+Claude:
+
+# --run paranccsal
+docker run --rm -it --gpus all -v "E:/Önlab/llm_models:/llm_models" -v "E:/Önlab/prompts:/prompts" ghcr.io/ggerganov/llama.cpp:full-cuda --run -m /llm_models/Llama-3.2-1B-Instruct-Q4_K_M.gguf --system-prompt-file /prompts/system_prompt.txt --prompt-file /prompts/user_prompt.txt
+
+# Kimenet átirányítása fájlba
+docker run --rm -it --gpus all -v "E:/Önlab/llm_models:/llm_models" -v "E:/Önlab/prompts:/prompts" -v "E:/Önlab/outputs:/outputs" ghcr.io/ggerganov/llama.cpp:full-cuda ./main -m /llm_models/Llama-3.2-1B-Instruct-Q4_K_M.gguf --system-prompt-file /prompts/system_prompt.txt --prompt-file /prompts/user_prompt.txt > /outputs/eredmeny.txt

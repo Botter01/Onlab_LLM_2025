@@ -1,0 +1,47 @@
+Malware analysis is the process of learning malware behaviours. Due to the large volumeand increasing complexity of malware, we need to be able to rapidly analyse samples in acomplete, reliable and scalable way. To achieve this, we need to employ techniques suchas static analysis, dynamic analysis, symbolic execution and concolic execution [1]. Theseprogram analysis techniques have been developed to support the software development cycle,and they often need to be customized or extended for malware analysis because maliciousprograms typically include code constructed specifically to resist analysis. That is, the mainchallenge in malwareanalysis is to detect and bypass anti-analysis mechanisms.
+Static Analysis
+Static analysis involves examining the code (source, intermediate, or binary) to assess the
+behaviours of a program without actually executing it [1]. A wide range of malware analysis
+techniques fall into the category of static analysis. One limitation is that the analysis output
+may not be consistent with the actual malware behaviours (at runtime). This is because in
+many cases it is not possible to precisely determine a program’s behaviours statically (i.e.,
+without the actual run-time input data). A more serious problem is that malware authors
+are well aware of the limitations of static analysis and they leverage code obfuscation and
+packing to thwart static-analysis altogether. For example, the packed code cannot be statically
+analysed because it is encrypted and compressed data until unpacked into executable code
+at run-time.
+Dynamic analysis
+Dynamic analysis monitors the behaviours of malware execution in order to identify malicious behaviours [1]. Static analysis can provide more comprehensive coverage of program
+behaviours but may include unfeasible ones. Dynamic analysis identifies the precise program
+behaviours per the test input cases but misses behaviours that are not triggered by the input.
+Additionally, dynamical analysis can defeat code obfuscation techniques designed to evade
+static analysis. For example, when malware at run-time unpacks and executes its packed code,
+dynamic analysis is able to identify the (run-time) malicious behaviours in the originally packed
+code. When performing dynamic analysis, the main questions to consider are: what types of
+malicious behaviours need to be identified and correspondingly, what run-time features need
+to be collected and when to collect (or sample), and how to isolate the effects on the malware
+from those of benign system components. Typically, the run-time features to be collected
+need to be from a layer lower than the malware itself in the system stack so that the malware
+cannot change the collected information. For example, instruction traces certainly cover all
+the details of malicious behaviours but the data volume is too large for efficient analysis [20].
+On the other hand, system call (or API call) traces are coarser but summarise how malware
+interacts with the run-time system, including file I/O and networking activities [21]. Another
+advantage of dynamic analysis is that it is independent of the malware format, e.g., binary,
+script, macro, or exploit, because all malware is executed and analysed in a similar fashion.
+Fuzzing
+Fuzzing is a method for discovering vulnerabilities, bugs and crashes in software by feeding
+randomised inputs to programs. Fuzzing tools [22] can also be used to trigger malware
+behaviours. Fuzzing can explore the input space, but it is limited due to code-coverage
+issues [7], especially for inputs that drive the program down complex branch conditions.
+In contrast, concolic execution (see 3.1.5 Concolic Execution) is good at finding complex
+inputs by formulating constraints, but is also expensive and slow. To take advantage of both
+approaches, a hybrid approach [23] called hybrid fuzzing can be used.
+Symbolic Execution
+Symbolic execution [24, 25, 26, 7, 10] has been used for vulnerability analysis of legitimate
+programs as well as malware analysis [8]. It treats variables and equations as symbols and
+formulas that can potentially express all possible program paths. A limitation of concrete
+execution (i.e., testing on particular inputs), including fuzzing, for malware analysis is that
+the program has to be executed end-to-end, one run at a time. Unlike concrete execution,
+symbolic execution can explore multiple branches simultaneously. To explore unseen code
+sections and unfold behaviours, symbolic execution generalises the input space to represent
+all possible inputs that could lead to points of interest.

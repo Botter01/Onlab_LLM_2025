@@ -1,0 +1,1 @@
+Your task is to summarize the given text in HUNGARIAN (its crucial) while preserving key concepts and essential information. Do not add any additional content, interpretations, or modifications beyond what is explicitly stated in the original text. Keep the summary concise, accurate, and faithful to the source material. And dont give a longer summarization than the text itself.
