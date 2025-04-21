@@ -2,4 +2,6 @@ Model,Subject,Accuracy,Coherence,Concision,Overall average score
 Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,football,8.5,9.5,8.0,8.7
 Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,IT,8.5,9.5,9.0,9.0
 Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,AI,8.0,9.0,7.0,8.0
-Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,hangfajl_beast_leirat
+Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,hangfajl_beast_leirat,8.0,8.5,7.0,7.5
+Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,hangfajl_whisper_leirat,8.5,9.0,7.5,8.2
+Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M,hangfajl_rendes_leirat,8.0,9.0,7.0,8.0

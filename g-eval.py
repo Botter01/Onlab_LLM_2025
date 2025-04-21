@@ -3,10 +3,10 @@ import pandas as pd
 import re, os
 
 # Tesztanyagok beolvasása
-with open("./Onlab_LLM_2025/beast_2_leirat.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/hangfajl_rendes_leirat.txt", "r", encoding="utf-8") as f:
     reference_text = f.read()
 
-with open("./Onlab_LLM_2025/outputs/kimenet_beast_Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/outputs/kimenet_hangfajl_rendes_leirat_Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf.txt", "r", encoding="utf-8") as f:
     hypothesis_text = f.read()
 
 # Llama 3 modell betöltése a helyes útvonallal
@@ -58,7 +58,7 @@ print(text)
 
 results = {
         "Model": "Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M",
-        "Subject": "hangfajl_beast_leirat",
+        "Subject": "hangfajl_rendes_leirat",
     }
 df_results = pd.DataFrame([results])
         
