@@ -3,23 +3,23 @@ import pandas as pd
 import re, os
 
 # Tesztanyagok beolvasása
-with open("./Onlab_LLM_2025/hangfajl_rendes_leirat.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/whisper_leirat_2_15_min.txt", "r", encoding="utf-8") as f:
     reference_text = f.read()
 
-with open("./Onlab_LLM_2025/outputs/kimenet_hangfajl_rendes_leirat_Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf.txt", "r", encoding="utf-8") as f:
+with open("./Onlab_LLM_2025/outputs/kimenet_whisper_2_Llama-3.2-1B-Instruct-Q4_K_M.gguf.txt", "r", encoding="utf-8") as f:
     hypothesis_text = f.read()
 
 # Llama 3 modell betöltése a helyes útvonallal
 llm = Llama(
     model_path="./llm_models/meta-llama-3-8b-instruct.Q4_K_M.gguf",
-    n_ctx=4096,
+    n_ctx=9000,
     n_gpu_layers=-1
 )
 
 # G-EVAL prompt készítése Llama 3 formátumban
 def create_geval_prompt(reference, hypothesis, criteria):
     prompt = f"""<|system|>
-Te egy szakértő szövegértékelő asszisztens vagy. A feladatod az alábbi összegzés értékelése az eredeti szöveg alapján.
+Te egy szakértő szövegértékelő asszisztens vagy. A feladatod az alábbi összegzés értékelése az eredeti szöveg alapján. Nagyon figyelj arra mi szerepel az összegzésben.
 </|system|>
 
 <|user|>
@@ -33,8 +33,8 @@ Te egy szakértő szövegértékelő asszisztens vagy. A feladatod az alábbi ö
 Értékeld a fenti összegzést az alábbi szempontok szerint, 1-től 10-ig terjedő skálán, úgy hogy tized pontokat is adhatsz:
 - {criteria}
 
-Minden szempont esetén add meg a pontszámot (1.0-10.0), és részletesen indokold döntésedet példákkal az eredeti és az összefoglaló szövegből. Ha pedig teljesen más témáról van szó az összegzésben akkor kevés pontot adj.
-Végül számold ki az átlagpontszámot is ilyen formában: (1.0-10.0). De ne adj overall score-t.
+Minden szempont esetén add meg a pontszámot (1.0-10.0). Ha pedig teljesen más témáról van szó az összegzésben akkor kevés pontot adj. Ha csak ismétlés van akkor is vonj le pontot.
+Végül számold ki az átlagpontszámot is ilyen formában: (1.0-10.0) és rövid leírást, hogy miért. Ha nem jelennek meg főszempontok akkor pontozd le az összegzést.
 </|user|>
 
 <|assistant|>"""
@@ -42,13 +42,13 @@ Végül számold ki az átlagpontszámot is ilyen formában: (1.0-10.0). De ne a
 
 # Értékelés futtatása
 criteria = "pontosság, koherencia, tömörség"
-output_file_path = "./Onlab_LLM_2025/results/Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf_g_eval_metrics.csv"
+output_file_path = "./Onlab_LLM_2025/results/Llama-3.2-1B-Instruct-Q4_K_M.gguf_g_eval_metrics.csv"
 prompt = create_geval_prompt(reference_text, hypothesis_text, criteria)
 
 # Generálás
 output = llm(
     prompt,
-    max_tokens=2048,
+    max_tokens=10000,
     temperature=0.1
 )
 
@@ -57,8 +57,8 @@ print(text)
 
 
 results = {
-        "Model": "Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M",
-        "Subject": "hangfajl_rendes_leirat",
+        "Model": "Llama-3.2-1B-Instruct-Q4_K_M",
+        "Subject": "hangfajl_whisper_leirat_2",
     }
 df_results = pd.DataFrame([results])
         

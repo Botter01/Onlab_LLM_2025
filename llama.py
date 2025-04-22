@@ -36,7 +36,7 @@ messages = [
 # Modell futtatása
 output = llm.create_chat_completion(
     messages=messages,
-    max_tokens=10000
+    max_tokens=8000
 )
 
 response_text = output["choices"][0]["message"]["content"].strip()

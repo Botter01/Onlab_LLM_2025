@@ -1,0 +1,11 @@
+Az első előadás célja a gépi tanulás általános áttekintése volt. A gépi tanulás alapvető célja, hogy olyan programokat hozzunk létre, amelyek saját működésük során szerzett tapasztalatok segítségével képesek javítani a hatékonyságukat. Ezt a kezdeti, nagyon általános megfogalmazást később pontosítanunk kell: meg kell határozni, hogy mit értünk tapasztalat, javulás és hatékonyság alatt. A gépi tanulás során olyan algoritmusokat szeretnénk készíteni, amelyek képesek a példákból szabályosságokat, összefüggéseket kinyerni.
+
+Fontos megjegyezni, hogy nemcsak a konkrét tanuló példákra kell jól teljesítenie a rendszernek, hanem az új, korábban nem látott példákra is. Ez az induktív tanulás lényege. A tanulási folyamat eredménye egy hipotézis lesz, amely a tanuló példák alapján kialakul, és amelyet később új példák segítségével tovább lehet pontosítani.
+
+A tanulási folyamat két fő szakaszból áll: először egy tanítási fázisból, ahol a rendszer tanuló példák segítségével modellezi az összefüggéseket, majd egy tesztelési fázisból, ahol a kialakított modell teljesítményét új adatokon értékeljük. Az egyik legfontosabb feladattípus a felügyelt tanulás (supervised learning), ahol minden tanuló példához ismert a helyes válasz. Ebben a kategóriában a legelterjedtebb feladat az osztályozás, például a karakterfelismerés: a rendszer kis képekről megállapítja, hogy milyen betűt ábrázolnak.
+
+Az adatok általában jellemzőkből (feature) állnak össze, amelyeket egy jellemző vektorba (feature vector) rendezünk. A feladat lényege, hogy a bemeneti jellemzőkből egy kimeneti osztálycímkét vagy valós számot (regresszió esetén) generáljunk.
+
+Más tanulási formák is léteznek: a felügyelet nélküli tanulás (unsupervised learning) során nincsenek osztálycímkék, csak az adatok közötti hasonlóságokra hagyatkozva kell csoportosítani az adatokat (például klaszterezés). Ezen kívül megemlítettek még speciális feladatokat is, mint például az időbeli sorozatok modellezését és a megerősítéses tanulást (reinforcement learning), ahol egy ügynök hosszú távú cél elérésére tanul egy adott környezetben.
+
+A félév során elsősorban a felügyelt tanulási feladatokkal foglalkozunk majd, különböző megközelítésekkel és algoritmusokkal.

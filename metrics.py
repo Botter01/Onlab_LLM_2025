@@ -68,9 +68,9 @@ if __name__ == "__main__":
     # nltk.download('wordnet')
     
     # Útvonalak beállítása
-    reference_path = "./Onlab_LLM_2025/references/referencia_hangfajl_whisper_leirat.txt"
-    hypothesis_path = "./Onlab_LLM_2025/outputs/kimenet_whisper_Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf.txt"
-    output_file_path = "./Onlab_LLM_2025/results/Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M.gguf_metrics.csv"
+    reference_path = "./Onlab_LLM_2025/references/referencia_hangfajl_beast_leirat_2.txt"
+    hypothesis_path = "./Onlab_LLM_2025/outputs/kimenet_beast_2_Llama-3.2-1B-Instruct-Q4_K_M.gguf.txt"
+    output_file_path = "./Onlab_LLM_2025/results/Llama-3.2-1B-Instruct-Q4_K_M.gguf_metrics.csv"
     
     # Eredmények mentése
-    save_metrics_to_file(reference_path, hypothesis_path, output_file_path, "Hacker-News-Comments-Summarization-Llama-3.1-8B-Instruct.i1-Q4_K_M")
+    save_metrics_to_file(reference_path, hypothesis_path, output_file_path, "Llama-3.2-1B-Instruct-Q4_K_M")
